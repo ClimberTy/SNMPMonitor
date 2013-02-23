@@ -18,7 +18,7 @@ public class SnmpMonitorClient {
 		      System.out.println("Client Connected... \n");
 		      System.out.println("##########################");
 		      System.out.println("#  Simple SNMP Monitor   #");
-		      System.out.println("# Creator: D. Tyler Long #");
+		      System.out.println("# Creator: Ty Long	   #");
 		      System.out.println("# Class: CMIS 445        #");
 		      System.out.println("##########################\n");
 		      System.out.println("Retrieving SNMP Data...");
