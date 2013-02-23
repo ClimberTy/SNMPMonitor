@@ -1,0 +1,39 @@
+############
+# Simple Network Monitoring Protocol (SNMP) RMI Application
+#
+# Creator: D. Tyler Long
+# Class: CMIS 445
+# Date: 09 Dec 2012
+#
+###########
+
+Important Information:
+Unfortunately the application will only get new data if
+it has SNMP enabled devices with the set addresses in the
+snmpWalk.py. Otherwise the Java RMI application will just
+read old data in from the snmpData.xml document provided.
+
+The data shouldn't be overwritten by Python if the SNMP
+data isn't gathered, it should just fail and leave the 
+XML doc intact.
+
+How to build:
+from the snmpmonitor/ folder type:
+
+# This will start the Java RMI Registry
+shell> rmiregistry &
+
+# This will build the .java files using the classpaths in
+# the build.xml file provided.
+shell> ant
+
+# To start the snmpmonitor server
+shell> ant startsnmpserver
+
+# In another terminal or another ssh/telnet client type
+shell> ant startsnmpclient
+
+# The application will start and the client should connect
+
+
+

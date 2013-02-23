@@ -1,0 +1,108 @@
+<?xml version="1.0" ?>
+<SNMPWalk>
+  <SNMPAgent attrb="1">
+    <OperatingSystem>
+      Windows 7
+    </OperatingSystem>
+    <SystemName>
+      Cloud-PC
+    </SystemName>
+    <SystemContact>
+      ty@GLaD0s
+    </SystemContact>
+    <SystemType>
+      Windows 7 Host
+    </SystemType>
+    <SystemDesc>
+      Intel64 Family 6 Model 23 Stepping 10 AT/AT COMPATIBLE - Software: Windows Version 6.1 (Build 7601 Multiprocessor Free)
+    </SystemDesc>
+    <SystemProcessor>
+      Unknown Processor Type
+    </SystemProcessor>
+    <SystemDrive>
+      C:\ Label:
+    </SystemDrive>
+    <SystemDriveSize>
+      1746 GB
+    </SystemDriveSize>
+    <SystemMemory>
+      8 GB
+    </SystemMemory>
+    <SystemUptime>
+      21419506
+    </SystemUptime>
+    <SystemProcesses>
+      62
+    </SystemProcesses>
+  </SNMPAgent>
+  <SNMPAgent attrb="2">
+    <OperatingSystem>
+      CentOS 6.3 GNOME x86_64
+    </OperatingSystem>
+    <SystemName>
+      centos.vm
+    </SystemName>
+    <SystemContact>
+      root@GlaD0s
+    </SystemContact>
+    <SystemType>
+      Vmware CentOS - GNOME
+    </SystemType>
+    <SystemDesc>
+      Linux centos.vm 2.6.32-279.14.1.el6.x86_64
+    </SystemDesc>
+    <SystemProcessor>
+      GenuineIntel: Intel(R) Core(TM)2 Duo CPU     T9900  @ 3.06GHz
+    </SystemProcessor>
+    <SystemDrive>
+      /
+    </SystemDrive>
+    <SystemDriveSize>
+      20 GB
+    </SystemDriveSize>
+    <SystemMemory>
+      1 GB
+    </SystemMemory>
+    <SystemUptime>
+      11110854
+    </SystemUptime>
+    <SystemProcesses>
+      155
+    </SystemProcesses>
+  </SNMPAgent>
+  <SNMPAgent attrb="3">
+    <OperatingSystem>
+      Fedora 17 XFCE x86_64
+    </OperatingSystem>
+    <SystemName>
+      fedora.xfce
+    </SystemName>
+    <SystemContact>
+      agent1@GlaD0s
+    </SystemContact>
+    <SystemType>
+      Vmware Fedora x64-XFCE
+    </SystemType>
+    <SystemDesc>
+      Linux fedora.xfce 3.6.7-4.fc17.x86_64
+    </SystemDesc>
+    <SystemProcessor>
+      GenuineIntel: Intel(R) Core(TM)2 Duo CPU     T9900  @ 3.06GHz
+    </SystemProcessor>
+    <SystemDrive>
+      /
+    </SystemDrive>
+    <SystemDriveSize>
+      20 GB
+    </SystemDriveSize>
+    <SystemMemory>
+      1 GB
+    </SystemMemory>
+    <SystemUptime>
+      11779225
+    </SystemUptime>
+    <SystemProcesses>
+      81
+    </SystemProcesses>
+  </SNMPAgent>
+</SNMPWalk>

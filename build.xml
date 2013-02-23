@@ -1,0 +1,72 @@
+<!-- ======================================================================= -->
+<!-- $Id: build.xml 1.2 2012/04/05 10:34:05EST dtlong                        -->
+<!-- ======================================================================= -->
+
+<project name="snmpmonitor" default="build.all">
+
+	<!-- =================================================================== -->
+	
+	<target name="property.setup">	
+    	<property name="snmpRmiDir" value="../snmpmonitor" /> 			
+	</target>
+
+	<!-- =================================================================== -->
+
+	<target name="clean.dirs" depends="property.setup">
+    	<fileset dir="${snmpRmiDir}/src/ty/snmpmonitor" excludes="*.java" />
+		<delete file="${snmpRmiDir}/snmpmonitor.jar"/>
+	</target>
+
+	<!-- =================================================================== -->
+	    	
+	<target name="rmic" depends="build.java">
+	    <rmic classname="ty.snmpmonitor.SnmpMonitor" base="${snmpRmiDir}"/>  			
+    </target>
+
+	
+	<!-- =================================================================== -->
+
+	<target name="build.java" depends="property.setup,clean.dirs" 
+	   description="build all JAVA stuff">
+		<javac srcdir="." destdir="${snmpRmiDir}" debug="on"/>		
+	</target>
+
+	<!-- =================================================================== -->
+
+	<target name="build.all" depends="clean.dirs,build.java" 
+	   description="build all necessary stuff">
+    	<jar basedir="${snmpRmiDir}" destfile="${snmpRmiDir}/snmpmonitor.jar" 
+    	   excludes="**/*.java"/>  
+	</target>
+	
+	<!-- =================================================================== -->
+	<!-- start rmiregistry with the classpath set to ty.rmi.snmpmonitor.     -->
+	<!-- it needs to find the stubs                                          -->
+
+	
+	<!-- =================================================================== -->
+
+    <target name="startsnmpserver" depends="property.setup">
+        <java classname="ty.snmpmonitor.SnmpMonitorServer" dir="${snmpRmiDir}" 
+            fork="yes">
+            <classpath>			  
+                <fileset dir="${snmpRmiDir}">
+                    <include name="*.jar"/>
+                </fileset>
+            </classpath>
+        </java>
+    </target>
+	
+	<!-- =================================================================== -->
+
+    <target name="startsnmpclient" depends="property.setup">
+        <java classname="ty.snmpmonitor.SnmpMonitorClient" dir="${snmpRmiDir}" 
+          fork="yes">
+            <classpath>	
+                <fileset dir="${snmpRmiDir}">
+                     <include name="*.jar"/>	
+                </fileset>
+            </classpath>
+        </java>
+    </target>
+</project>
